@@ -1,0 +1,11 @@
+*.o
+
+# Ignore executables
+a.out
+*.exe
+
+# Ignore editor/project files
+*.vscode/
+*.idea/
+*.DS_Store
+.nfs*
