@@ -1,0 +1,36 @@
+mysql -u cs340_yanbr -h classmysql.engr.oregonstate.edu -p
+cs340_yanbr
+4589
+backup 
+
+mysqldump -u cs340_yanbr -h classmysql.engr.oregonstate.edu -p cs340_yanbr > backup.sql
+
+set foreign_key_checks = 0; 
+dropping multiple tables
+
+source [file.sql] to use file in our sql
+
+-- Selects every record from TableName
+
+SELECT * FROM TableName;
+
+-- Selects only column1 and column3 from TableName
+
+SELECT column1, column3 from TableName;
+
+-- Selects all records from TableName where the column6 value is equal to 15
+
+SELECT * FROM TableName WHERE column6 = 15;
+
+-- Example Queries
+-- Selects all records from Colors
+
+SELECT * FROM Colors;
+
+-- Selects only colorName and colorHex from Colors
+
+SELECT colorName, colorHex FROM Colors;
+
+-- Selects all records where the colorName == 'Purple'
+
+SELECT * FROM Colors WHERE colorName = 'Purple'

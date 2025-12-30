@@ -1,0 +1,64 @@
+{{!-- /*
+* Citation: Citation is from node.js starter code. Citation was used to set up our page
+* Date: 02/28/2024
+* Adapted from: Github page
+* Source: https://github.com/osu-cs340-ecampus/nodejs-starter-app
+*/  --}}
+{{>header}}
+{{>navbar}}
+
+
+<main>
+    <h1>Locations</h1>
+
+    <div id="browse">
+        <table id="locations-table" border="1" cellpadding="5">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Country</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each data}}
+                <tr data-value="{{this.locationID}}">
+                    <td>{{this.locationID}}</td>
+                    <td>{{this.city}}</td>
+                    <td>{{this.state}}</td>
+                    <td>{{this.country}}</td>
+                    <td><button onclick="updateLocation('{{this.locationID}}', '{{this.city}}', '{{this.state}}', '{{this.country}}')">Edit</button></td>
+                    <td><button onclick="deleteLocation({{this.locationID}})">Delete</button></td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        <p>&nbsp;</p>
+    </div> <!-- browse -->
+    
+    <p>&nbsp;</p>
+
+    <div id="insert" style="display: block">
+        <form id="add-location-form" method="POST" action="/add-location-form">
+            <legend><strong>Add Location</strong></legend>
+            <fieldset class="fields">
+                <label> City </label> <input type="text" name="city" id="input-city">
+                <label> State </label> <input type="text" name="state" id="input-state">
+                <label> Country </label> <input type="text" name="country" id="input-country">
+            </fieldset>
+
+            <input class="btn" type="submit" id="addLocation" value="Add a Location">
+            <input class="btn" type="button" value="Cancel">
+        </form> <!--add new location-->
+    </div><!-- insert -->
+
+    <p>&nbsp;</p>
+
+</main>
+
+{{>locationModal}}
+
+

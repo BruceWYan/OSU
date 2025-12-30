@@ -1,0 +1,88 @@
+<!-- /* 
+ * Citation: Citation is for tables below and insert/update/delete items
+ * Date: 02/15/2024
+ * Copied from: Canvas from people.html and planets.html (bsg_HTML_UI.zip)
+ * Source: https://canvas.oregonstate.edu/courses/1946034/assignments/9456216?module_item_id=23809330
+ */ -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Restaurant Chains Page</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Foodies-R-Us</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="users.html">Users</a></li>
+                <li><a href="restaurants.html">Restaurants</a></li>
+                <li><a href="locations.html">Locations</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="cuisineTypes.html">Cuisine Types</a></li>
+                <li><a href="restaurantChains.html">Restaurant Chains</a></li>
+                <li><a href="restaurantCuisines.html">Restaurant Cuisines</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1>Restaurant Chains</h1>
+
+            <div id="browse">
+                <table border="1" cellpadding="5">
+                  <tr>
+                    <th></th>
+                    <th>ID</th>
+                    <th>Name</th>
+                  </tr>
+                  <tr>
+                    <td><a href="#" onclick="deleteRestaurantChain('this.restaurantChainID')">Delete</a></td>
+                    <td align="right" >1</td>
+                    <td >McDonald's</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#" onclick="deleteRestaurantChain('this.restaurantChainID')">Delete</a></td>
+                    <td align="right" >2</td>
+                    <td>Starbucks</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#" onclick="deleteRestaurantChain('this.restaurantChainID')">Delete</a></td>
+                    <td align="right" >3</td>
+                    <td>Subway</td>
+                  </tr>
+                </table>
+                <p>&nbsp;</p>
+            </div> <!-- browse -->
+            <p>&nbsp;</p>
+        </div> <!-- browse -->
+
+        <div id="insert" style="display: block">
+            <form id="addRestaurantChain">
+                <legend><strong>Add Restaurant Chain</strong></legend>
+                  <fieldset class="fields">
+                    <label> Restaurant Chain Name </label> <input type="text" name="name">
+                  </fieldset>
+                  <input class="btn" type="submit" id="addRestaurantChain" value="Add a Restaurant Chain">
+                  <input class="btn" type="button" value="Cancel">
+            </form> <!--add new restaurantChain-->
+        </div><!-- insert -->
+        
+        <p>&nbsp;</p>
+        <div id="update" style="display: block">
+          <form id="updateRestaurantChain">
+              <legend><strong>Update Restaurant Chain</strong></legend>
+                  <fieldset class="fields">
+                    <label> Restaurant Chain Name</label> <input type="text" name="name">
+            </fieldset>
+            <input class="btn" type="submit" id="UpdateSaveRestaurantChain" value="Save Update Restaurant Chain">
+                  <input class="btn" type="button" value="Cancel" >
+          </form> 
+        </div><!-- update -->
+        <p>&nbsp;</p>
+
+        </main>
+    </body>
+</html>

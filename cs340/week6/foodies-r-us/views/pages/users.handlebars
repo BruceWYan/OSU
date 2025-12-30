@@ -1,0 +1,68 @@
+{{!-- /*
+* Citation: Citation is from node.js starter code. Citation was used to set up our page
+* Date: 02/28/2024
+* Adapted from: Github page
+* Source: https://github.com/osu-cs340-ecampus/nodejs-starter-app
+*/  --}}
+
+{{>header}}
+{{>navbar}}
+
+
+<main>
+    <h1>Users</h1>
+
+    <div id="browse">
+        <table id="users-table" border="1" cellpadding="5">
+            <thead>
+                {{!-- For just the first row, we print each key of the row object as a header cell so we
+                know what each column means when the page renders --}}
+                <tr>             
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{!-- For each row, print the userID, username, email, password, fName, and lName, in order --}}
+                {{#each data}}
+                <tr data-value="{{this.userID}}">
+                    <td>{{this.userID}}</td>
+                    <td>{{this.username}}</td>
+                    <td>{{this.email}}</td>
+                    <td>{{this.password}}</td>
+                    <td>{{this.fName}}</td>
+                    <td>{{this.lName}}</td>
+                    <td><button onclick="updateUser('{{this.userID}}', '{{this.fName}}', '{{this.lName}}', '{{this.username}}', '{{this.email}}', '{{this.password}}')">Edit</button></td>
+                    <td><button onclick="deleteUser({{this.userID}})">Delete</button></td>
+                </tr>
+                {{/each}}
+            </tbody>
+            <p>&nbsp;</p>
+        </table>
+    </div> <!-- browse -->
+    <p>&nbsp;</p>
+
+    <div id="insert" style="display: block">
+        <form id="add-user-form" method="POST" action="/add-user-form">
+        <legend><strong>Add User</strong></legend>
+            <fieldset class="fields">
+                <label> Username </label> <input type="text" name="username" id="input-username">
+                <label> Email </label> <input type="text" name="email" id="input-email">
+                <label> Password </label> <input type="text" name="password" id="input-password">
+                <label> First Name </label> <input type="text" name="fName" id="input-fName">
+                <label> Last Name </label> <input type="text" name="lName" id="input-lName">
+            </fieldset>
+        <input class="btn" type="submit" id="addUser" value="Add User">
+        <input class="btn" type="button" value="Cancel">
+        </form> <!--add new user-->
+    </div><!-- insert -->
+    <p>&nbsp;</p>
+</main>
+
+{{>userModal}}

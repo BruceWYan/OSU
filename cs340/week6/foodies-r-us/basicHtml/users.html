@@ -1,0 +1,121 @@
+<!-- /* 
+ * Citation: Citation is for tables below and insert/update/delete items
+ * Date: 02/15/2024
+ * Copied from: Canvas from people.html and planets.html (bsg_HTML_UI.zip)
+ * Source: https://canvas.oregonstate.edu/courses/1946034/assignments/9456216?module_item_id=23809330
+ */ -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Users Page</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Foodies-R-Us</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="users.html">Users</a></li>
+                <li><a href="restaurants.html">Restaurants</a></li>
+                <li><a href="locations.html">Locations</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="cuisineTypes.html">Cuisine Types</a></li>
+                <li><a href="restaurantChains.html">Restaurant Chains</a></li>
+                <li><a href="restaurantCuisines.html">Restaurant Cuisines</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1>Users</h1>
+
+            <div id="browse">
+                <table border="1" cellpadding="5">
+                  <tr>
+                    <th></th>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                  </tr>
+                  <tr>
+                    <td><a href="#" onclick="deleteUser('this.userID')">Delete</a></td>
+                    <td>1</td>
+                    <td>user1</td>
+                    <td>user1@example.com</td>
+                    <td>password1</td>
+                    <td>John</td>
+                    <td>Doe</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#" onclick="deleteUser('this.userID')">Delete</a></td>
+                    <td>2</td>
+                    <td>user2</td>
+                    <td>user2@example.com</td>
+                    <td>password2</td>
+                    <td>Jane</td>
+                    <td>Smith</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#" onclick="deleteUser('this.userID')">Delete</a></td>
+                    <td>3</td>
+                    <td>user3</td>
+                    <td>user3@example.com</td>
+                    <td>password3</td>
+                    <td>Michael</td>
+                    <td>Johnson</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#" onclick="deleteUser('this.userID')">Delete</a></td>
+                    <td>4</td>
+                    <td>user4</td>
+                    <td>user4@example.com</td>
+                    <td>password4</td>
+                    <td>Emily</td>
+                    <td>Brown</td>
+                  </tr>
+                </table>
+                <p>&nbsp;</p>
+            </div> <!-- browse -->
+            <p>&nbsp;</p>
+        </div> <!-- browse -->
+
+        <div id="insert" style="display: block">
+            <form id="addUser">
+                <legend><strong>Add User</strong></legend>
+                  <fieldset class="fields">
+                    <label> Username </label> <input type="text" name="username">
+                    <label> Email </label> <input type="text" name="email">
+                    <label> Password </label> <input type="text" name="password">
+                    <label> First Name </label> <input type="text" name="fName">
+                    <label> Last Name </label> <input type="text" name="lName">
+                  </fieldset>
+                  <input class="btn" type="submit" id="addUser" value="Add User">
+                  <input class="btn" type="button" value="Cancel">
+            </form> <!--add new user-->
+        </div><!-- insert -->
+        
+        <p>&nbsp;</p>
+        <div id="update" style="display: block">
+          <form id="updateUser">
+              <legend><strong>Update User</strong></legend>
+                  <fieldset class="fields">
+                  <label> Username </label> <input type="text" name="username">
+                  <label> Email </label> <input type="text" name="email">
+                  <label> Password </label> <input type="text" name="password">
+                  <label> First Name </label> <input type="text" name="fName">
+                  <label> Last Name </label> <input type="text" name="lName">
+            </fieldset>
+            <input class="btn" type="submit" id="UpdateSaveUser" value="Save Update User">
+                  <input class="btn" type="button" value="Cancel" >
+          </form> 
+        </div><!-- update -->
+        <p>&nbsp;</p>
+        
+        </main>
+    </body>
+</html>

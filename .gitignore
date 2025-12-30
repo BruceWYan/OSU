@@ -9,3 +9,5 @@ a.out
 *.idea/
 *.DS_Store
 .nfs*
+*.swp
+node_modules/

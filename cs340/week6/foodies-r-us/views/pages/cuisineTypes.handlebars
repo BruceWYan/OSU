@@ -1,0 +1,59 @@
+{{!-- /*
+ * Citation: Citation is from node.js starter code. Citation was used to set up our page
+ * Date: 03/06/2024
+ * Adapted from: Github page
+ * Source: https://github.com/osu-cs340-ecampus/nodejs-starter-app
+ */  --}}
+{{>header}}
+{{>navbar}}
+
+
+
+<main>
+  <h1>Cuisine Types</h1>
+
+  <div id="browse">
+        <table id="cuisine-table" border="1" cellpadding="5">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Type</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each data}}
+                <tr data-value="{{this.cuisineTypeID}}">
+                    <td>{{this.cuisineTypeID}}</td>
+                    <td>{{this.type}}</td>
+                    <td><button onClick="updateCuisineType('{{this.cuisineTypeID}}', '{{this.type}}')">Edit</button></td>
+                    <td><button onclick="deleteCuisineType({{this.cuisineTypeID}})">Delete</button></td>
+                </tr>
+                {{/each}}
+            </tbody>
+            <p>&nbsp;</p>
+        </table>
+      
+  </div> <!-- browse --> 
+  <p>&nbsp;</p>
+
+  <div id="insert" style="display: block">
+        <form id="add-cuisine-form" method="POST" action="/add-cuisine-form">
+            <legend><strong>Add Cuisine Type</strong></legend>
+            <fieldset class="fields">
+                <label> Type </label> 
+                <input type="text" name="type" id="input-type">
+            </fieldset>
+
+            <input class="btn" type="submit" id="addCuisineType" value="Add a Cuisine Type">
+            <input class="btn" type="button" value="Cancel">
+        </form> <!--add new cuisine type-->
+  </div><!-- insert -->
+
+<p>&nbsp;</p>
+
+
+</main>
+
+{{>cuisineTypeModal}}

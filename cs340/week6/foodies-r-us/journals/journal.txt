@@ -1,0 +1,95 @@
+2/14:
+    - Created repo
+    - Initial setup
+
+2/15: 
+    - Added html skeleton for each page
+    - Added Select for table information
+    - Added DDL.sql
+    - Updated actions we are to take to update outline/ERD/schema based on TA/peer feedback
+    - Update outline, ERD, schema, DDL.sql file based on TA and peer feedback
+    - Update entities, crud list google doc so that we have checklist of things
+    - Update HTML pages to be specialized to their own information tables
+    - DMQ.sql
+
+2/21:
+    - checklist of what to do for step 3 based on peer feedback from reviews
+
+2/22:
+    - step 3 final submission based on peer feedback
+
+2/27:
+    - checklist of what to edit on project based on TA feedback from step 3 final submission, also for step 4
+
+2/28:
+    - decided on doing Users entity
+    - got READ (Select) working
+
+2/29:
+    - got CREATE (Insert) working
+    - DELETE (Delete) WORKSSSSSSSSSSSSSSS
+    - UPDATE (Update) TEEHEE (dropdown corresponding to primary key ID works)
+    - made column names more human readable (in Users page; currently hardcoded)
+
+3/6: 
+    - Review UPDATE works with app.js {BWY}
+    - NEED to fix textarea on Review UPDATE for styling {BWY}
+    - Reviews overall works for all crud
+    - RestaurantChains works for all crud
+    - CuisineTypes works for CRU. DELETE left
+
+3/7:
+    - fixed Reviews SELECT not being in order by reviewID
+    - CuisineTypes DELETE works
+    - Locations CRUD all works
+
+3/13:
+    - Changed Modal Update for Users, Locations, Chains, CuisineTypes, Reviews
+    - RetaurantCuisines has issue when adding if it already exists
+    - RC add + read is done
+    - Restaurants page: location and chain are no longer the ID, 
+    dropdowns for adding are dynamic now. ADD doesn't work, 
+    INSERT works
+    - reminder: NO LONGER using hidden inputs ;_;
+
+3/14:
+    - RestaurantCuisines dropdown for adding a record and editing are now dynamic. 
+      HOWEVER, after making dynamic, INSERT does not seem to work anymore ;/
+    
+3/16:
+    - RestaurantCuisines DELETE works
+    - RestaurantCuisines INSERT WORKS AGAIN EUSHAHAHDHAFJSDFOIHWIDJFWK
+    - Review UPDATE does not work with apostrophe. 3/16 UPDATE: Fixed it seems kinda. 
+      If a review has more than one apostrophre tho, seems to get truncated to before that second one
+
+3/17:
+    - RestaurantCuisines UPDATE WORKS. HOWEVER, any record where restaurant has apostrophe, can't get past clicking edit button...
+    FK Dropdown updated is updated to be current rather than the first one of the options
+    UPDATE: added forEach listener.
+
+3/18:
+    - Restaurants FK dropdown UPDATE WORKSSSSSSSSSSSSSSS. 
+    - Restaurants FK dropdown is now updated such that option goes to current selected one for particular record
+    - Users DELETE now updates table again w/o having to reload page. Will do same for other entities
+    - Restaurants, Locations, Reviews, CuisineTypes, RestaurantChains, RestaurantCuisines (AKA every other entity)
+      tables, when deleting a record, updates w/o having to refresh page again
+    - Added a 'NULL' option for chain in Restaurants add and delete
+
+
+Things found to fix / To-do / thoughts to consider later (if we can get to it): 
+    - UI stuff (based on Alexander's feedback, what visuals we like change)
+
+    - data input validation for specific fields? (like email in users page?)
+    - validation for RC add to avoid duplicates. AKA should have contraint handling for RC INSERT/UPDATE. 
+      Duplicates specifically such that dropdown is updated based on previously selected values (vice versa)
+
+    - Add error handle for fields that are not populated or have input. Data validation handling 
+    - in app route, if data is null, then reroute
+
+
+Update local feature branch with changes from remote main branch:
+git fetch origin 
+git checkout main
+git pull origin main
+git checkout [branch]
+git merge main
