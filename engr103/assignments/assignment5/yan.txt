@@ -1,0 +1,16 @@
+		Bruce yan
+First name: Bruce
+Last name: yan
+Email: byan1423@gmail.com
+University: Oreong state 
+Major: coputer science 
+Graduation year: 2022
+GPA: 4
+		Experience
+Company: lksdfja
+Start Date: 11/20/2000
+End Date: 11/20/20003
+Description: lasdjf
+
+		Skills
+Skill 1: lksdjf;l

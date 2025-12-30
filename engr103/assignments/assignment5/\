@@ -1,0 +1,38 @@
+#include <iostream> 
+#include <string> 
+#include <cstring> 
+
+using namespace std; 
+
+bool is_letters (char item[]){
+	int total;
+	for (int i = 0; i < strlen(item); i++){
+		if ((item[i] - '\0' >= 97 && item[i] - '\0' <= 122) || (item[i] - '\0' >= 65 && item[i] - '\0' <= 90) || item[i] - '\0' == 32) {
+			total +=0;
+		}
+		
+		else {
+			total ++;
+		}
+	}
+	if (total > 0){
+		return false;
+	}
+}
+
+bool is_email (char item[]){
+	for (int i = 0; i < strlen(item); i++){
+		if ((item[i] - '\0' >= 97 && item[i] - '\0' <= 122) || (item[i] - '\0' >= 65 && item[i] '\0' <= 90) || (item[i] - '\0' >= 48 && item[i] - '\0' <= 57) || item[i] - '\0' == 46 || item[i] - '\0' == 64){
+
+
+}
+
+
+bool is_number (int n){
+	if (n <= 12){
+		cout << "yes it works" << endl;
+	}
+	else {
+		cout << "nope" << endl; 
+	}
+} 
