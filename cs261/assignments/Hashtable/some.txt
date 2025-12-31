@@ -1,0 +1,49 @@
+ht_insert(ht, key, value, and covert):
+    hash index = hash function;
+    Find our bucket based off of our hash index
+
+    Find a key in our bucket, return a ht_element
+        if yes
+            then we just change the value of the element i.e. ht_element->value = value
+        if no
+            then we create a element and then list_insert(bucket, new_ht_element)
+
+    Loadfactor, size/capacity > 4 
+        rehash 
+
+struct ht{
+    struct dynarray* table
+    int size
+}
+
+struct ht_node{
+    void* key
+    void* val
+}
+
+rehash(ht, convert, new_cap)
+    struct dynarray* new = dynarray_create();
+    for (int i = 0; i < new_cap; i++)
+        dynarray_insert(new, list_create());
+
+    Loop through our old array with the old capacity
+        grab a bucket 
+        list_node* current = bucket->head;
+        while (current* != NULL)
+            struct ht_node* = current->val
+            find our new hash index (hash_index)
+            struct list* new_bucket = dynarray_get(new, hash_index)
+            list_insert(new_bucket, ht_node)
+            current = current->next
+        
+        list_free(bucket)
+    
+    dynarray free (ht->table)
+    ht->table = new;
+
+
+
+
+            
+
+    
