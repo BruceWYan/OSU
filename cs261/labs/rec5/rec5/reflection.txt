@@ -1,0 +1,2 @@
+I have a difficult time with c-strings and casting any type of pointer into char pointers, honestly I don't know a lot about casting or passting pointers for functions and other variables
+I feel like I honestly don't understand much when it comes to finding the time complexity. It could simply be that I am not as sharp with math.

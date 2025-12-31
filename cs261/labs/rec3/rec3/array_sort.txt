@@ -1,0 +1,3 @@
+there was an issue with the insert sort, instead of breaking 
+and then swapping the values out side of the if statment, we needed 
+to swap the values within the if statement

@@ -1,0 +1,19 @@
+Example 1: 
+    Best Case: O(1)
+    Average Case: O(n)
+    Worst Case: O(n)
+    The space complexity of this code will be O(1)
+
+Example 2: 
+    Best Case: O(n)
+    Average Case: O(n)
+    Worst Case: O(n^2)
+    The space complexity of this code will be O(1)
+
+Example 3: 
+    Best Case: O(1)
+    Average Case: O(n)
+    Worst Case: O(n)
+    The space complexity of this code will be O(1)
+
+    

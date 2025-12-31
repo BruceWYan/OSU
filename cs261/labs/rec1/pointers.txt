@@ -1,0 +1,68 @@
+1: a = 0x7ffe9257f1d0, b = 0x11a1010, c = 0x4007ed
+    a. In this printf statement we only wanted to print out the variables
+        a, b, and c. Since all of these values are pointers, we ended up printing out
+        the memory addresses.
+    b. Memory addresses
+        a = 0x7ffe9257f1d0 
+        b = 0x11a1010
+        c = 0x4007ed
+    c. There are currently no contents in any of a, b, or, c
+
+2: a[0] = 200, a[1] = 101, a[2] = 102, a[3] = 103
+    a. In this printf statement, prior to printing out our c pointer got the a pointer
+        pointing to an array of size 4. We utilized a for loop to assign values to each
+        index in our array. However, at the end we changed the value of the first index from 
+        100 to 200.
+    b. Memory Addresses
+        a = 0x7ffe9257f1d0
+        b = 0x11a1010
+        c = 0x7ffe9257f1d0 
+    c. Contents
+        a contains an array of size 4 with the values of 200, 101, 102, and 103
+        b is empty
+        c points to whatever a contains
+3: a[0] = 200, a[1] = 300, a[2] = 301, a[3] = 302
+    a. In this printf statement, we traverse to the first index in the array and change it to 300
+        then we traverse to index 2 in the array and assign 301 to it and then we go to the third
+        index in the array and assign it the value 302
+    b. Memory Address
+        a = 0x7ffe9257f1d0
+        b = 0x11a1010
+        c = 0x7ffe9257f1d0 
+    c. Contents
+        a contains the array
+        b is empty
+        c contains the same array
+4: a[0] = 200, a[1] = 400, a[2] = 301, a[3] = 302
+    a. In this printf statement we assign the c pointer to point to the first index in the array
+        Then we change the value contained in our c pointer to 400
+    b. Memory Address
+        a = 0x7ffe9257f1d0
+        b = 0x11a1010
+        c = 0x7ffe9257f1d4  
+    c. Contents
+        a contins the array 
+        b is empty 
+        c points to the first value in the array
+5: a[0] = 200, a[1] = 128144, a[2] = 256, a[3] = 302
+    a. In this printf statement we turn the c int pointer to a char pointer at the first index
+        then we assign the first index the value of 500
+    b. Memory Address
+        a = 0x7ffe9257f1d0
+        b = 0x11a1010
+        c = 0x7ffe9257f1d5 
+    c. Contents
+        a has the array
+        b is empty 
+        c is a char pointer to the 1st index in the array
+6: a = 0x7ffe9257f1d0, b = 0x7ffe9257f1d4, c = 0x7ffe9257f1d1
+    a. In this printf statement we assgin our b pointer to an int pointer to the first index in a
+    b. Memory Address
+        a = 0x7ffe9257f1d0
+        b = 0x7ffe9257f1d4
+        c = 0x7ffe9257f1d1
+    c. Contents
+        a still contains the array 
+        b gets the pointer to the first index 
+        c is a char pointer to the 1st index in the array
+

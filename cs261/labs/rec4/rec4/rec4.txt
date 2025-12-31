@@ -1,0 +1,5 @@
+For the data structure to design this robot, I will use a linked list. Since I will need to iterate through all the log entries and not need
+to access any specific log entry, a linked list would be perfect since you will have to access the first part of the list in order to acess any 
+specific point anyway.
+
+O(n) complexity for anagram is O(n)

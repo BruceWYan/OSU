@@ -1,0 +1,8 @@
+The function in this program takes in an input
+and a counter which starts at 0 and returns 1 if 
+it is a prime number or 0 if it is not a prime number. 
+The function does this by dividing the given integer 
+by integers starting from 2 to the half way point
+of the given integer. If the remainder of any of the 
+divisions is 0, this means that our given integer is 
+divisible and is not a prime number.

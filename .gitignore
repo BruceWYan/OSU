@@ -11,3 +11,6 @@ a.out
 .nfs*
 *.swp
 node_modules/
+*.zip 
+*.tsv
+*.gdb_history

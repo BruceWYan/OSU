@@ -1,0 +1,6 @@
+Function sorts the integers in a given array
+of size n by starting at the 2nd integer in 
+the array and comparing it to the integer before it.
+If the current integer is less than the integer before it,
+the function will swap the two integers. It will continue to
+iterate through the array of integers.
