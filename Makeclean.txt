@@ -1,0 +1,5 @@
+find . -type f -name Makefile -print0 | while IFS= read -r -d '' mf; do
+  dir="$(dirname "$mf")"
+  echo "Running make clean in $dir"
+  (cd "$dir" && make clean)
+done
